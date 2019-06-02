@@ -20,6 +20,7 @@ class PotlucksController < ApplicationController
   end
 
   def data
+    render json: Potluck.all
   end
 
 
