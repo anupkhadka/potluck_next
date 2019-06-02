@@ -19,4 +19,26 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-sm-6 border-right">
+      <div class="row login-row justify-content-center">
+        <%= form_tag("/login") do %>
+          <div class="row"><%= text_field_tag "email", nil, placeholder: "Email"%></div>
+          <div class="row"><%= text_field_tag "password", nil, placeholder: "Password"%></div>
+          <div class="row"><%= submit_tag "Log In", class: "login-button" %></div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="row sign-up-row">
+        <p><%=link_to('Sign Up With Email', '/users/new')%></p>
+        <p>Don't want an account? Sign in with <%=link_to('Google', '/auth/google_oauth2')%> or <%=link_to('Facebook', '/auth/facebook')%> instead.</p>
+        <p class="api-data-link">If you just want to access publicly available data, they are made available through this <%=link_to('API endpoint', 'potlucks/data')%></p>
+      </div>
+
+    </div>
+  </div>
+
 </div>

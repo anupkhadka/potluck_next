@@ -59,7 +59,22 @@
   color: #A64AC9;
 }
 
-.sub-header {
-  font-size: 20px;
-  color: #31708E;
+.login-button {
+  border-radius: 25px;
+  color: grey;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.login-row {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.sign-up-row {
+  margin-left: 10%;
+}
+
+.api-data-link {
+  margin-top: 15px;
 }
