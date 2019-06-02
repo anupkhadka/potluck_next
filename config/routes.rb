@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :potlucks
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
+  get '/potlucks/data' => 'potlucks#data'
 end

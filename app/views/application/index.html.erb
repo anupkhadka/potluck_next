@@ -33,9 +33,9 @@
 
     <div class="col-sm-6">
       <div class="row sign-up-row">
-        <p><%=link_to('Sign Up With Email', '/users/new')%></p>
+        <p><%=link_to('Sign Up With Email', new_user_path)%></p>
         <p>Don't want an account? Sign in with <%=link_to('Google', '/auth/google_oauth2')%> or <%=link_to('Facebook', '/auth/facebook')%> instead.</p>
-        <p class="api-data-link">If you just want to access publicly available data, they are made available through this <%=link_to('API endpoint', 'potlucks/data')%></p>
+        <p class="api-data-link">If you just want to access publicly available data, they can be accessed through this <%=link_to('API endpoint', potlucks_data_path)%>.</p>
       </div>
 
     </div>
