@@ -7,4 +7,7 @@
       <div class="row create-account-button-row"><%= f.submit "Create Account" %></div>
     <% end %>
   </div>
+  <% if flash[:error] %>
+    <div class="row justify-content-center user-flash-error"><%= flash[:error] %></div>
+  <% end %>
 </div>
