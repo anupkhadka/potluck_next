@@ -43,6 +43,7 @@ gem 'jquery-rails'
 # Omniauth
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 # Handle environment variables
 gem 'dotenv-rails'
