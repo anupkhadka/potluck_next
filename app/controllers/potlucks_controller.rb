@@ -12,8 +12,12 @@ class PotlucksController < ApplicationController
   def create
     potluck = Potluck.new(potluck_params)
     potluck.organizer = current_user
-    potluck.save
-    redirect_to potlucks_path
+    if potluck.valid?
+      potluck.save
+      redirect_to potlucks_path
+    else
+      redirect_to new_potluck_path
+    end
   end
 
   def show
