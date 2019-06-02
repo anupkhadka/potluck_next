@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row justify-content-center new-potluck-form">
+    <%= form_for(potluck) do |f| %>
+      <div class="row"><%= f.text_field :name, placeholder: "Name" %></div>
+      <div class="row"><%= f.date_field :date %></div>
+      <div class="row create-potluck-button-row"><%= f.submit "Create Potluck"%></div>
+    <% end %>
+  </div>
+</div>

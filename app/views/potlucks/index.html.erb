@@ -3,3 +3,11 @@
 <% end %>
 
 <br>
+
+<% @potlucks.each do |potluck| %>
+  <%= link_to potluck.name, potluck %>
+  on <%= potluck.date %> by <%= potluck.organizer.name %>
+  <br>
+<% end %>
+<br>
+<%= link_to('Create New Potluck', new_potluck_path) %>
