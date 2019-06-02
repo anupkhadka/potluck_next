@@ -1,1 +1,15 @@
-<%= @potluck.name %> on <%= @potluck.date %> by <%= @potluck.organizer.name %>
+<div class="container">
+  <div class="row potluck-show-box">
+    <div class="col-sm-12">
+      <div class="row potluck-name"><%= link_to @potluck.name, @potluck %></div>
+      <div class="row"><span class="potluck-details-label">Organizer</span>:&nbsp<span class="potluck-details-content"><%= @potluck.organizer.name %></span></div>
+      <div class="row"><span class="potluck-details-label">Date</span>:&nbsp<span class="potluck-details-content"><%= @potluck.date %></span></div>
+      <div class="row"><%=link_to('Edit', edit_potluck_path(@potluck))%></div>
+      <div class="row">
+        <%= form_tag potluck_path(@potluck), method: "delete" do %>
+          <input type=submit value='Delete'>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
