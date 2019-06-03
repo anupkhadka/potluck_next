@@ -1,24 +1,7 @@
-# README
+# PotluckNext
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Description
+A Rails app with Google/Facebook OmniAuth support for easy sign-up to help plan your next potluck party with friends. Provides access to some public data via an API endpoint. Database: PostgreSQL.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Screenshot](https://i.imgur.com/DZfXcrL.png)
