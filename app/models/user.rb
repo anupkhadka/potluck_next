@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
   has_many :organized_potlucks, class_name: "Potluck", foreign_key: "organizer_id"
+  has_many :items
+  has_many :participated_potlucks, through: :items, source: :potluck
 
   # validations
   validates :name, presence: true
