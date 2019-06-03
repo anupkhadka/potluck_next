@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show]
+  before_action :set_item, only: [:show, :destroy]
 
   def new
     @potluck = Potluck.find_by(id: params[:potluck_id])
@@ -16,6 +16,12 @@ class ItemsController < ApplicationController
   end
 
   def show
+  end
+
+  def destroy
+    potluck = @item.potluck
+    @item.destroy
+    redirect_to potluck
   end
 
   private

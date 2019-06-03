@@ -1,1 +1,7 @@
-<%= @item.name %> by <%= @item.user.name %>
+<%= @item.name %><br>
+Potluck: <%=@item.potluck.name %><br>
+Potlucker: <%= @item.user.name %><br>
+
+<%= form_tag potluck_item_path(@item), method: "delete" do %>
+  <input type=submit value='Delete'>
+<% end %>

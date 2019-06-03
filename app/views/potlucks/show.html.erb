@@ -18,7 +18,7 @@
         <ul>
           <% @potluck.items.each do |item| %>
             <li>
-               <%=item.user.name%> is bringing <%= link_to item.name, potluck_item_path(item) %>.
+               <%=item.user.name%> is bringing <%= link_to item.name, potluck_item_path(@potluck, item) %>.
             </li>
           <% end %>
         </ul>
