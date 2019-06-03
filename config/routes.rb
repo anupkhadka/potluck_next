@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'data'
     end
+    resources :items
   end
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
