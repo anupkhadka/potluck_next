@@ -10,6 +10,21 @@
           <input type=submit value='Delete'>
         <% end %>
       </div>
+
+      <% if @potluck.items.length == 0 %>
+        There are currently no items for this potluck.
+      <% else %>
+        Items:
+        <ul>
+          <% @potluck.items.each do |item| %>
+            <li>
+               <%=item.user.name%> is bringing <%= link_to item.name, potluck_item_path(item) %>.
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+      <br>
+      <%= link_to "Add New Item", new_potluck_item_path(@potluck) %>
     </div>
   </div>
 </div>
