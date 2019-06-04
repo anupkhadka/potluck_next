@@ -20,7 +20,10 @@ class ItemsController < ApplicationController
 
   def destroy
     potluck = @item.potluck
-    @item.destroy
+    if logged_in? && @item.user == current_user
+      # Only the user who created the item can delete the item.
+      @item.destroy
+    end
     redirect_to potluck
   end
 
