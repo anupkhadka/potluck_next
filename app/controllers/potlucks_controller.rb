@@ -21,6 +21,7 @@ class PotlucksController < ApplicationController
   end
 
   def show
+    @item = Item.new
   end
 
   def edit

@@ -1,5 +1,8 @@
 <div class="container">
-  <div class="row">
+
+  <%= render 'application/title' %>
+
+  <div class="row potluck-show">
     <div class="col-sm-6 border-right">
       <div class="row potluck-show-box">
         <div class="col-sm-12">
@@ -21,11 +24,18 @@
         <div class="col-sm-12">
           <div class="row potluck-show-item-headlines">ITEMS</div>
           <% if @potluck.items.length == 0 %>
-            <p>There are currently no items for this potluck.</p>
+            <div class="row">There are currently no items for this potluck.</div>
           <% else %>
             <%= render 'items/items' %>
           <% end %>
-          <div class="row add-new-item-link"><%= link_to "Add New Item", new_potluck_item_path(@potluck) %></div>
+          <div class="row add-new-item-link">
+            <div class="col-sm-12">
+              <%= form_for ([@potluck, @item]) do |f| %>
+              <div class="row"><%= f.text_field :name %></div>
+              <div class="row"><%= f.submit %></div>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
