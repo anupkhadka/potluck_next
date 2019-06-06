@@ -1,4 +1,80 @@
-@import 'bootstrap';
-@import 'style';
-@import 'users';
-@import 'potlucks';
+.header {
+  font-family: Garamond;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.app-name {
+  font-size: 40px;
+}
+
+.app-description {
+  font-size: 20px;
+  color: #31708E;
+}
+
+.potluck_p {
+  font-weight: bold;
+  color: #31708E;
+}
+
+.potluck_o {
+  color: #17E9E0;
+}
+
+.potluck_t {
+  color: #3B945E;
+}
+
+.potluck_l {
+  color: #F172A1;
+}
+
+.potluck_u {
+  color: #B39BC8;
+}
+
+.potluck_c {
+  color: #1F6521;
+}
+
+.potluck_k {
+  color: #D6CE15;
+}
+
+.potluck_n {
+  font-weight: bold;
+  color: #222629;
+}
+
+.potluck_e {
+  color: #86C232;
+}
+
+.potluck_x {
+  color: #FAED26;
+}
+
+.potluck_t {
+  color: #A64AC9;
+}
+
+.login-button {
+  border-radius: 25px;
+  color: grey;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.login-row {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.sign-up-row {
+  margin-left: 10%;
+}
+
+.api-data-link {
+  margin-top: 15px;
+}
