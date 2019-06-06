@@ -1,30 +1,35 @@
 <div class="container">
-  <div class="row potluck-show-box">
-    <div class="col-sm-12">
-      <div class="row potluck-name"><%= link_to @potluck.name, @potluck %></div>
-      <div class="row"><span class="potluck-details-label">Organizer</span>:&nbsp<span class="potluck-details-content"><%= @potluck.organizer.name %></span></div>
-      <div class="row"><span class="potluck-details-label">Date</span>:&nbsp<span class="potluck-details-content"><%= @potluck.date %></span></div>
-      <div class="row"><%=link_to('Edit', edit_potluck_path(@potluck))%></div>
-      <div class="row">
-        <%= form_tag potluck_path(@potluck), method: "delete" do %>
-          <input type=submit value='Delete'>
-        <% end %>
+  <div class="row">
+    <div class="col-sm-6 border-right">
+      <div class="row potluck-show-box">
+        <div class="col-sm-12">
+          <div class="row potluck-name"><%= link_to @potluck.name, @potluck %></div>
+          <div class="row"><span class="potluck-details-label">Organizer</span>:&nbsp<span class="potluck-details-content"><%= @potluck.organizer.name %></span></div>
+          <div class="row"><span class="potluck-details-label">Date</span>:&nbsp<span class="potluck-details-content"><%= @potluck.date %></span></div>
+          <div class="row edit-potluck-link"><%=link_to('Edit', edit_potluck_path(@potluck))%></div>
+          <div class="row">
+            <%= form_tag potluck_path(@potluck), method: "delete" do %>
+            <input type=submit value='Delete'>
+            <% end %>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <% if @potluck.items.length == 0 %>
-        There are currently no items for this potluck.
-      <% else %>
-        Items:
-        <ul>
-          <% @potluck.items.each do |item| %>
-            <li>
-               <%=item.user.name%> is bringing <%= link_to item.name, potluck_item_path(@potluck, item) %>.
-            </li>
+    <div class="col-sm-6">
+      <div class="row items-show-box">
+        <div class="col-sm-12">
+          <div class="row potluck-show-item-headlines">ITEMS</div>
+          <% if @potluck.items.length == 0 %>
+            <p>There are currently no items for this potluck.</p>
+          <% else %>
+            <% @potluck.items.each do |item| %>
+              <div class="row"><%=link_to item.name, potluck_item_path(@potluck, item)%> | <%=item.user.name%></div>
+            <% end %>
           <% end %>
-        </ul>
-      <% end %>
-      <br>
-      <%= link_to "Add New Item", new_potluck_item_path(@potluck) %>
+          <div class="row add-new-item-link"><%= link_to "Add New Item", new_potluck_item_path(@potluck) %></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
