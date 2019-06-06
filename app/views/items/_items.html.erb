@@ -1,0 +1,5 @@
+<div class="itemsbox">
+  <% @potluck.items.each do |item| %>
+    <div class="row"><%=link_to item.name, potluck_item_path(@potluck, item)%> | <%=item.user.name%></div>
+  <% end %>
+</div>
