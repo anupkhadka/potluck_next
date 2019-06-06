@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   post '/logout' => 'sessions#destroy'
   get '/auth/:provider/callback' => 'sessions#create'
   get 'auth/failure', to: redirect("/")
+  get '*path' => redirect('/')
 end

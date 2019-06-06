@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :destroy]
 
   def new
+    redirect_to_root_if_not_logged_in
     @potluck = Potluck.find_by(id: params[:potluck_id])
     @item = @potluck.items.build
   end
@@ -16,6 +17,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    redirect_to_root_if_not_logged_in
   end
 
   def destroy
