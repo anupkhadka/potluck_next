@@ -6,7 +6,7 @@
   margin-top: 10px;
 }
 
-.potlucks-greeting {
+.potluck-user-greeting {
   margin-top: 10px;
   margin-bottom: 40px;
   font-family: Garamond;
@@ -20,15 +20,6 @@
   margin-bottom: 5%;
 }
 
-.potluck-show {
-  margin-top: 40px;
-}
-
-.potlucks-footer {
-  margin-left: 10%;
-  margin-bottom: 5px;
-}
-
 .potluck {
   margin-bottom: 10px;
 }
@@ -37,16 +28,6 @@
   font-family: Garamond;
   font-size: 20px;
   line-height: 150%;
-}
-
-.potluck-details {
-  font-family: Garamond;
-  font-size: 18px;
-  line-height: 150%;
-}
-
-.italicize {
-  font-style: italic;
 }
 
 .potluck-details-label {
@@ -60,6 +41,15 @@
   font-family: Garamond;
   font-size: 16px;
   line-height: 150%;
+}
+
+.potlucks-footer {
+  margin-left: 10%;
+  margin-bottom: 5px;
+}
+
+.potluck-show-main-frame {
+  margin-top: 40px;
 }
 
 .potluck-show-box {

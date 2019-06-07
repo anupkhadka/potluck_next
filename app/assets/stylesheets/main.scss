@@ -1,18 +1,6 @@
-.header {
-  font-family: Garamond;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.app-name {
+.logo {
   text-align: center;
   font-size: 40px;
-}
-
-.app-description {
-  font-size: 20px;
-  color: #31708E;
-  text-align: center;
 }
 
 .potluck_p {
@@ -61,6 +49,18 @@
   color: #A64AC9;
 }
 
+.sub-logo {
+  font-size: 20px;
+  color: #31708E;
+  text-align: center;
+}
+
+.header {
+  font-family: Garamond;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 .login-button {
   border-radius: 25px;
   color: grey;
@@ -68,15 +68,11 @@
   margin-top: 5px;
 }
 
-.login-row {
+.login-form {
   margin-top: 10%;
   margin-bottom: 10%;
 }
 
-.sign-up-row {
+.sign-up-info {
   margin-left: 10%;
-}
-
-.api-data-link {
-  margin-top: 15px;
 }

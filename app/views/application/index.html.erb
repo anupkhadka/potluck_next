@@ -2,7 +2,7 @@
   <div class="row text-center header">
     <div class="col-sm-12">
       <%= render 'application/title' %>
-      <div class="app-description">
+      <div class="sub-logo">
         <strong>|</strong> Plan your next potluck <strong>|</strong>
       </div>
     </div>
@@ -10,7 +10,7 @@
 
   <div class="row">
     <div class="col-sm-6 border-right">
-      <div class="row login-row justify-content-center">
+      <div class="row login-form justify-content-center">
         <%= form_tag("/login") do %>
           <div class="row"><%= text_field_tag "email", nil, placeholder: "Email"%></div>
           <div class="row"><%= password_field_tag  "password", nil, placeholder: "Password"%></div>
@@ -20,10 +20,11 @@
     </div>
 
     <div class="col-sm-6">
-      <div class="row sign-up-row">
+      <div class="row sign-up-info">
         <p><%=link_to('Sign Up With Email', new_user_path)%></p>
         <p>Don't want an account? Sign in with <%=link_to('Google', '/auth/google_oauth2')%> or <%=link_to('Facebook', '/auth/facebook')%> instead.</p>
-        <p class="api-data-link">If you just want to access publicly available data, they can be accessed through this <%=link_to('API endpoint', data_potlucks_path)%>.</p>
+        <p></p>
+        <p>Limited data is available publicly without signup via this <%=link_to('API endpoint', data_potlucks_path)%>.</p>
       </div>
 
     </div>
