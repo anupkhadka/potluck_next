@@ -1,13 +1,12 @@
 class PotlucksController < ApplicationController
   before_action :set_potluck, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_to_root_if_not_logged_in, only: [:index, :new, :show, :edit]
 
   def index
-    redirect_to_root_if_not_logged_in
     @potlucks = Potluck.all
   end
 
   def new
-    redirect_to_root_if_not_logged_in
     @potluck = Potluck.new
   end
 
@@ -16,19 +15,17 @@ class PotlucksController < ApplicationController
     potluck.organizer = current_user
     if potluck.valid?
       potluck.save
-      redirect_to potlucks_path
+      redirect_to potluck
     else
       redirect_to new_potluck_path
     end
   end
 
   def show
-    redirect_to_root_if_not_logged_in
     @item = Item.new
   end
 
   def edit
-    redirect_to_root_if_not_logged_in
     if logged_in? && current_user == @potluck.organizer
       render :edit
     else
